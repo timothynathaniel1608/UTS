@@ -1,0 +1,127 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rata-rata dari N Bilangan</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> 
+    <style>
+        .sub-header {
+            color: #3d3b2f;
+            margin-top: 40px; 
+        }
+
+        .code-block {
+            background: #ffffff; 
+            padding: 1rem; 
+            border-radius: 8px; 
+            margin-top: 1rem; 
+        }
+
+        .flowchart-image {
+            background: #ffffff; 
+            padding: 1rem; 
+            border-radius: 8px; 
+            margin-top: 1rem; 
+        }
+
+        .next-page-button {
+            display: inline-flex;
+            align-items: center;
+            background-color: #3d3b2f; 
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 20px;
+            transition: background-color 0.3s;
+            border: none; 
+            cursor: pointer; 
+        }
+
+        .next-page-button:hover {
+            background-color: #5a5a4f; 
+        }
+
+        .next-page-button i {
+            margin-right: 8px; 
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-content">
+            <div class="logo">Algoritma & Pemograman</div>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="content">
+        <h2>Rata-rata dari N Bilangan</h2>
+        <h3 class="sub-header">Deskripsi</h3>
+        <pre class="code-block">
+        <p>Anda bisa memasukkan berbagai bilangan dan sebanyak apapun untuk dihitung rata-ratanya.</p>
+        </pre>
+        <br> 
+        <h3 class="sub-header">Flowchart</h3>
+        <div class="flowchart-image">
+            <img src="2.jpg" alt="Flowchart Mencari Bilangan Terbesar">
+        </div>
+        <h3 class="sub-header">Pseudocode</h3>
+        <pre class="code-block">
+            MULAI
+            BACA jumlah_bilangan
+            jumlah <- 0
+            UNTUK i <- 1 HINGGA jumlah_bilangan LAKUKAN
+                BACA bilangan
+                jumlah <- jumlah + bilangan
+            AKHIR UNTUK
+            rata_rata <- jumlah / jumlah_bilangan
+            TULIS "Rata-rata adalah: ", rata_rata
+        SELESAI
+        </pre>
+
+        <h3 class="sub-header">Contoh Kode C++</h3>
+        <pre class="code-block">
+            #include <iostream>
+
+                using namespace std;
+                
+                int main() {
+                    int jumlah_bilangan, bilangan;
+                    float jumlah = 0, rata_rata;
+                
+                    cout << "Masukkan jumlah bilangan: ";
+                    cin >> jumlah_bilangan;
+                
+                    for (int i = 1; i <= jumlah_bilangan; ++i) {
+                        cout << "Masukkan bilangan ke-" << i << ": ";
+                        cin >> bilangan;
+                        jumlah += bilangan;
+                    }
+                
+                    rata_rata = jumlah / jumlah_bilangan;
+                
+                    cout << "Rata-rata adalah: " << rata_rata << endl;
+                
+                    return 0;
+                }
+        </pre>
+        
+        <a href="index.html" class="next-page-button">
+            <i class="fas fa-arrow-right"></i> Main Dashboard
+        </a>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2024 Timothy Nathaniel & Yoga Cipta. TUGAS UTS ALGORITMA & PEMOGRAMAN</p>
+        </div>
+    </footer>
+</body>
+</html>
